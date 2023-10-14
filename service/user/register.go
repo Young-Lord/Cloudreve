@@ -16,7 +16,7 @@ import (
 type UserRegisterService struct {
 	//TODO 细致调整验证规则
 	UserName string `form:"userName" json:"userName" binding:"required"`
-	Password string `form:"Password" json:"Password" binding:"required,min=4,max=64"`
+	Password string `form:"Password" json:"Password" binding:"required,max=128"`
 }
 
 // Register 新用户注册

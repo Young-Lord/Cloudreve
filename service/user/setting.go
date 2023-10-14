@@ -57,8 +57,8 @@ type HomePage struct {
 
 // PasswordChange 更改密码
 type PasswordChange struct {
-	Old string `json:"old" binding:"required,min=4,max=64"`
-	New string `json:"new" binding:"required,min=4,max=64"`
+	Old string `json:"old" binding:"required,max=128"`
+	New string `json:"new" binding:"required,max=128"`
 }
 
 // Enable2FA 开启二步验证

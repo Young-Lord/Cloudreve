@@ -19,7 +19,7 @@ import (
 type UserLoginService struct {
 	//TODO 细致调整验证规则
 	UserName string `form:"userName" json:"userName" binding:"required"`
-	Password string `form:"Password" json:"Password" binding:"required,min=4,max=64"`
+	Password string `form:"Password" json:"Password" binding:"required,max=128"`
 }
 
 // UserResetEmailService 发送密码重设邮件服务
@@ -29,7 +29,7 @@ type UserResetEmailService struct {
 
 // UserResetService 密码重设服务
 type UserResetService struct {
-	Password string `form:"Password" json:"Password" binding:"required,min=4,max=64"`
+	Password string `form:"Password" json:"Password" binding:"required,max=128"`
 	ID       string `json:"id" binding:"required"`
 	Secret   string `json:"secret" binding:"required"`
 }
